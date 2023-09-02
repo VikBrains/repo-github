@@ -1,4 +1,3 @@
-
 sp = [55, 44, "hello", True, 99.88, 100]
 
 # for i in range(len(sp)):
@@ -35,3 +34,18 @@ sp = [55, 44, "hello", True, 99.88, 100]
 # print(sp)                      # 
 # s.discard(777)                # удаление из массива указанного
 # print(s)                      #
+
+d = {123: 4654454, "тетя ира": [45454]}
+d["дядя ваня"] = "546545"
+# d[input("Введите имя контакта ")] = input("Введите номер телефона ")       # ???
+d["тетя ира"].append(55255)
+# print(d)
+# del d[123]
+# print(d)
+# print(d.keys())
+# print(d.values())
+# for k in d:
+#     print(k)
+for key, value in d.items():
+    print(f"{key} - {value}")
+

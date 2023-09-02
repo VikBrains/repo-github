@@ -5,6 +5,7 @@
 # 5 -> 1 0 1 1 0
 # 2
 
+
 c = int(input("сколько лежит монет: "))
 rever = aver = 0
 for i in range(c):

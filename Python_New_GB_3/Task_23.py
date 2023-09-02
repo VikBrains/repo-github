@@ -5,7 +5,7 @@
 # Output: 2 (-1 < 5, 2 < 3)
 # Примечание: Пользователь может вводить значения списка или список задан изначально.
 
-sp = [0, -1, 5, 2, 3, 1, -1]
+sp = [0, -1, 5, 2, 3, 1, 4, 6]
 count = 0
 
 for i in range(1, len(sp)):
@@ -14,14 +14,6 @@ for i in range(1, len(sp)):
 
 print(count)
 
-list_1 = [1, 2, 4, 1, 6, 8, 2, 9, 3, 2, 5]
-k = 1
-count = 0
 
-for i in range(len(list_1)):
-    if list_1[i] == k:
-        count += 1
-
-print(count)
 
 

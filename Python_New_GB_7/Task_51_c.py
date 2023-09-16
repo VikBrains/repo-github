@@ -3,11 +3,27 @@
 # Если значение характеристики для разных объектов отличается - то False. 
 # Для пустого набора объектов, функция должна возвращать True. 
 # Аргумент characteristic - это функция, которая принимает объект и вычисляет его характеристику.
-# Ввод: 
+# # Ввод: 
 # values = [0, 2, 10, 6] 
 # if same_by(lambda x: x % 2, values):
 #     print(‘same’)
 # else:
 #     print(‘different’)
-# Вывод:
+# # Вывод:
 # same
+
+# функция filter
+
+def same_by(characteristic, objects):
+    S = set(list(map(characteristic, objects)))
+    if len(S) <= 1:
+        return True
+    else:
+        return False
+
+# values = []
+values = [0, 2, 10, 6]
+if same_by(lambda x: x % 2, values):
+    print('same')
+else:
+    print('different')

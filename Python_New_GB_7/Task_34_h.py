@@ -6,7 +6,36 @@
 # Фразы отделяются друг от друга пробелами. Стихотворение Винни-Пух вбивает в программу с клавиатуры. 
 # В ответе напишите “Парам пам-пам”, если с ритмом все в порядке и “Пам парам”, если с ритмом все не в порядке
 # Ввод:
-# пара-ра-рам рам-пам-папам па-ра-па-дам
+sentence_0 = ("пара-ра-рам рам-пам-папам па-ра-па-дам")
 # Вывод:
-# Парам пам-пам
+# Парам пам-пам  / Пам-парам
 
+sentence_1 = ("Трам-парам-парам-пам")
+sentence_2 = ("Хорошо-живет-на-свете-Винни-Пух! Оттого-поет-он-эти-песни-вслух!")
+sentence_3 = ("А-я-иду-и-снег-идёт. Хотя-нам-с-ним-совсем-не-по-дороге.")
+
+# sentence_x = input("Введите строки Винни-Пуха: ")
+
+
+
+def check_rhythm(sentence):
+    syllables = []
+        
+    for sentence in sentence.split(" "):
+        words = sentence.split("-")
+        syllables.append(sum([count_vowels(word) for word in words]))
+    
+    if len(set(syllables)) == 1:
+        return "Парам пам-пам"
+    else:
+        return "Пам парам"
+
+def count_vowels(word):
+    vowels = "аеёиоуыэюя"
+    count = 0    
+    for simbol in word:
+        if simbol.lower() in vowels:
+            count += 1
+    return count
+
+print(check_rhythm(sentence_0))
